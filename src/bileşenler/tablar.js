@@ -15,7 +15,19 @@ const Tablar = (konu) => {
   //
 
   //YİĞİT
-}
+
+  const topicsDiv = document.createElement("div");
+  topicsDiv.classList.add("topics");
+
+  konu.forEach((element) => {
+    const tab = document.createElement("div");
+    tab.classList.add("tab");
+    tab.textContent = element;
+    topicsDiv.appendChild(tab);
+  });
+
+  return topicsDiv;
+};
 
 const tabEkleyici = (secici) => {
   // GÖREV 4
@@ -25,8 +37,7 @@ const tabEkleyici = (secici) => {
   // Yanıtın içindeki konu dizisini bulun ve Tablar bileşenini kullanarak tabları oluşturun.
   // Tabları, fonksiyona iletilen seçiciyle eşleşen DOM'daki öğeye ekleyin.
   //
-
   //CEYLİN
-}
+};
 
-export { Tablar, tabEkleyici }
+export { Tablar, tabEkleyici };
