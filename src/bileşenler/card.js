@@ -17,6 +17,8 @@ const Card = (makale) => {
   //   </div>
   // </div>
   //
+
+  //ŞİRZAT
 }
 
 const cardEkleyici = (secici) => {
@@ -28,6 +30,8 @@ const cardEkleyici = (secici) => {
   // Card bileşenini kullanarak yanıttaki her makale nesnesinden bir kart oluşturun.
   // Her cardı, fonksiyona iletilen seçiciyle eşleşen DOM'daki öğeye ekleyin.
   //
+
+  //KAZIM YAPIYOR
 }
 
 export { Card, cardEkleyici }

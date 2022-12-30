@@ -13,6 +13,8 @@ const Tablar = (konu) => {
   //   <div class="tab">teknoloji</div>
   // </div>
   //
+
+  //YİĞİT
 }
 
 const tabEkleyici = (secici) => {
@@ -23,6 +25,8 @@ const tabEkleyici = (secici) => {
   // Yanıtın içindeki konu dizisini bulun ve Tablar bileşenini kullanarak tabları oluşturun.
   // Tabları, fonksiyona iletilen seçiciyle eşleşen DOM'daki öğeye ekleyin.
   //
+
+  //CEYLİN
 }
 
 export { Tablar, tabEkleyici }

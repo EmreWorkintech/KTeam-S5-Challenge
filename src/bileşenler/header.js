@@ -11,6 +11,8 @@ const Header = (baslik, tarih, yazi) => {
   //    <span class="temp">{ yazi }</span>
   //  </div>
   //
+
+  //HAKAN
 }
 
 const headerEkleyici = (secici) => {
@@ -23,7 +25,8 @@ const headerEkleyici = (secici) => {
 
   // İPUCU: querySelector bir string alabilir (bknz: querySelector("#wrapper")) 
   // fakat aynı zamanda bir değişken de alabilir (bknz: querySelector(secici))
- 
+
+  //ABDULLAH
 }
 
 export { Header, headerEkleyici }
