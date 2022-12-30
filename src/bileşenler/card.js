@@ -1,5 +1,36 @@
+import { createTestScheduler } from "jest"
+
 const Card = (makale) => {
   // GÖREV 5
+
+    const card = document.createElement("div");
+    const headline = document.createElement("div");
+    const author = document.createElement("div");
+    const imgContainer = document.createElement("div");
+    const yazarFoto = document.createElement("img");
+    const yazarAdı = document.createElement("span");
+
+    card.classList.add("card");
+    headline.classList.add("headline");
+    author.classList.add("author");
+    imgContainer.classList.add("img-container");
+
+    yazarFoto.src = makale.yazarFoto ;
+
+    headline.textContent = makale.anabaslik;
+    yazarAdı.textContent = makale.yazarAdı + " tarafından";
+
+    imgContainer.appendChild(yazarFoto);
+    author.appendChild(imgContainer);
+    author.appendChild(yazarAdı);
+    card.appendChild(headline);
+    card.appendChild(author);
+
+    card.addEventListener("click" , (event) => {
+     console.log(event.target.querySelector(".headline").textContent);
+    })
+    return card;
+
   // ---------------------
   // Aşağıda gördüğünüz işaretlemeyi döndürmesi gereken bu fonksiyonu uygulayın.
   // Tek argümanı olarak "anabaslik", "yazarFoto" ve "yazarAdı" özelliklerine sahip bir "makale" nesnesi alır.
