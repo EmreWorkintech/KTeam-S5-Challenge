@@ -1,4 +1,6 @@
+import axios from "axios";
 import { createTestScheduler } from "jest"
+import { response } from "msw";
 
 const Card = (makale) => {
   // GÖREV 5
@@ -18,7 +20,7 @@ const Card = (makale) => {
     yazarFoto.src = makale.yazarFoto ;
 
     headline.textContent = makale.anabaslik;
-    yazarAdı.textContent = makale.yazarAdı + " tarafından";
+    yazarAdı.textContent = makale.yazarAdi + " tarafından";
 
     imgContainer.appendChild(yazarFoto);
     author.appendChild(imgContainer);
@@ -53,6 +55,21 @@ const Card = (makale) => {
 }
 
 const cardEkleyici = (secici) => {
+
+const cardEkle = document.querySelector(secici);
+axios
+.get("http://localhost:5001/api/makaleler")
+.then((response) => {
+  for(let key in response.data.makaleler){
+
+    for(let i = 0;i<response.data.makaleler[key].length;i++){
+      cardEkle.appendChild(Card(response.data.makaleler[key][i]));
+    }
+  }
+
+  
+})
+
   // GÖREV 6
   // ---------------------
   // Tek bağımsız değişkeni olarak bir css seçici alan bu fonksiyonu uygulayın.
